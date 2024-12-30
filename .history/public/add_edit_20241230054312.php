@@ -20,6 +20,8 @@ if($_POST){
         $database->addContact($name_first, $name_last, $email, $birthday);
     }
 
+    $database->addContact($name_first, $name_last, $email, $birthday);
+
     header('Location: index.php');
 }
 

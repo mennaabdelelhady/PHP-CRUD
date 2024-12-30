@@ -8,17 +8,12 @@ $database = new Database();
 $title ="Simple PHP CRUD -Add / Edit Contacts";
 
 if($_POST){
-    $id = $_POST['id'] ?? null;
     $name_first = $_POST['first_name'];
     $name_last = $_POST['last_name'];
     $email = $_POST['email'];
     $birthday = $_POST['birthday'];
 
-    if($id){
-        $database->updateContact($id, $name_first, $name_last, $email, $birthday);
-    }else{
-        $database->addContact($name_first, $name_last, $email, $birthday);
-    }
+    $database->addContact($name_first, $name_last, $email, $birthday);
 
     header('Location: index.php');
 }

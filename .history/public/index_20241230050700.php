@@ -32,13 +32,13 @@ $contacts = $database->getContacts();
         <tbody>
             <?php foreach ($contacts as $contact):?>   
             <tr>
-                <td><?php echo $contact['name_first'];?></td>
-                <td><?php echo $contact['name_last'];?></td>
-                <td><?php echo $contact['email'];?></td>
-                <td><?php echo $contact['birthday'];?></td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>test@test.com</td>
+                <td>1990-01-01</td>
                 <td>
-                    <a href="add_edit.php?id=<?php echo $contact['id'];?>" class="btn btn-primary">Edit</a>
-                    <a href="delete.php?id=<?php echo $contact['id'];?>" class="btn btn-danger">Delete</a>
+                    <a href="add_edit.php" class="btn btn-primary">Edit</a>
+                    <a href="delete.php" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <?php endforeach; ?>

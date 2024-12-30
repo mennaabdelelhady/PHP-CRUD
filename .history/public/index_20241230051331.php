@@ -38,7 +38,7 @@ $contacts = $database->getContacts();
                 <td><?php echo $contact['birthday'];?></td>
                 <td>
                     <a href="add_edit.php?id=<?php echo $contact['id'];?>" class="btn btn-primary">Edit</a>
-                    <a href="delete.php?id=<?php echo $contact['id'];?>" class="btn btn-danger">Delete</a>
+                    <a href="delete.php?id=<?php echo $contact['id'];?" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -14,11 +14,7 @@ if($_POST){
     $email = $_POST['email'];
     $birthday = $_POST['birthday'];
 
-    if($id){
-        $database->updateContact($id, $name_first, $name_last, $email, $birthday);
-    }else{
-        $database->addContact($name_first, $name_last, $email, $birthday);
-    }
+    $database->addContact($name_first, $name_last, $email, $birthday);
 
     header('Location: index.php');
 }

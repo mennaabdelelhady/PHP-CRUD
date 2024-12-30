@@ -8,17 +8,12 @@ $database = new Database();
 $title ="Simple PHP CRUD -Add / Edit Contacts";
 
 if($_POST){
-    $id = $_POST['id'] ?? null;
     $name_first = $_POST['first_name'];
     $name_last = $_POST['last_name'];
     $email = $_POST['email'];
     $birthday = $_POST['birthday'];
 
-    if($id){
-        $database->updateContact($id, $name_first, $name_last, $email, $birthday);
-    }else{
-        $database->addContact($name_first, $name_last, $email, $birthday);
-    }
+    $database->addContact($name_first, $name_last, $email, $birthday);
 
     header('Location: index.php');
 }
@@ -46,13 +41,13 @@ if ($id){
             <label for="name_first" class="form-label">First Name</label>
             <input type="text" class="form-control" id="name_first" \
             name="name_first" placeholder="First Name"
-            value="<?php echo $contact['name_first'] ?? null; ?>">
+            value="<?php echo $contact['first_name'] ?? null; ?>">
         </div>
         <div class="mb-3">
             <label for="name_last" class="form-label">Last Name</label>
             <input type="text" class="form-control" id="name_last" 
             name="name_last" placeholder="Last Name"
-            value="<?php echo $contact['name_last'] ?? null; ?>">
+            value="<?php echo $contact['last_name'] ?? null; ?>">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
@@ -66,7 +61,6 @@ if ($id){
             name="birthday" placeholder="Birthday"
             value="<?php echo $contact['birthday'] ?? null; ?>">
         </div>
-        <input type="hidden" name="id" value="<?php echo $contact['id'] ?? null; ?>">
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Save</button>
             <a href="index.php" class="btn btn-secondary">Cancel</a>

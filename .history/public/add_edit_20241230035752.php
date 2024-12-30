@@ -18,22 +18,22 @@ $title ="Simple PHP CRUD -Add / Edit Contacts";
         <div class="mb-3">
             <label for="name_first" class="form-label">First Name</label>
             <input type="text" class="form-control" id="name_first" \
-            name="first_name" placeholder="First Name">
+            name="first_name">
         </div>
         <div class="mb-3">
             <label for="name_last" class="form-label">Last Name</label>
             <input type="text" class="form-control" id="name_last" 
-            name="last_name" placeholder="Last Name">
+            name="last_name">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="text" class="form-control" id="email" 
-            name="email" placeholder="Email">
+            name="email">
         </div>
         <div class="mb-3">
             <label for="birthday" class="form-label">birthday</label>
             <input type="date" class="form-control" id="birthday" 
-            name="birthday" placeholder="Birthday">
+            name="birthday">
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">Save</button>
